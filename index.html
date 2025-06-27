@@ -11,13 +11,19 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #ffd6e0, #ffeaf2);
       color: #333;
       text-align: center;
-      overflow-x: hidden;
       padding: 20px;
+      min-height: 100vh;
+      overflow-y: auto; /* garante scroll vertical */
     }
 
     h1 {
@@ -65,6 +71,7 @@
       animation: rise 8s infinite ease-in;
       opacity: 0.6;
       z-index: 0;
+      pointer-events: none;
     }
 
     .heart::before,
@@ -104,9 +111,11 @@
       h1 {
         font-size: 2em;
       }
+
       h2 {
         font-size: 1em;
       }
+
       p {
         font-size: 1em;
       }
@@ -118,7 +127,7 @@
   <h2>Você é minha alegria de todos os dias 💕</h2>
 
   <div class="photo">
-    <img src="nos.jpg" alt="Nós dois" />
+    <img src="nos.jpg" alt="Nós duas" />
   </div>
 
   <p>
@@ -130,7 +139,7 @@
   </p>
 
   <footer>
-    Com todo meu amor,<br><strong>Seu eterno apaixonado 💘</strong>
+    Com todo meu amor,<br><strong>Janaína💘</strong>
   </footer>
 
   <!-- Corações animados -->
