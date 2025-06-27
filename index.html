@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário, Amor!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #ffd6e0, #ffeaf2);
+      color: #333;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #d6336c;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-top: -10px;
+      color: #444;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .photo {
+      margin: 20px auto;
+    }
+
+    .photo img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    /* Corações animados */
+    .heart {
+      position: fixed;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: rise 8s infinite ease-in;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes rise {
+      0% {
+        bottom: -50px;
+        opacity: 0.6;
+        transform: translateX(0) rotate(45deg);
+      }
+      100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(100px) rotate(45deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Feliz Aniversário, meu amor!</h1>
+  <h2>Você é minha alegria de todos os dias 💕</h2>
+
+  <div class="photo">
+    <img src="./Nos.png" alt="Nós" />
+  </div>
+
+  <p>
+    Hoje o dia é todinho seu, mas quem ganha sou eu, por ter o privilégio de estar ao seu lado.
+    Você é o meu amor, minha melhor amiga, minha parceira para todas as horas.
+    <br><br>
+    Obrigado por ser essa mulher maravilhosa, carinhosa, forte e incrível. Te amo mais do que as palavras conseguem expressar.
+    Que sua vida seja sempre iluminada, e que eu esteja ao seu lado em todos os aniversários que ainda virão. ❤️
+  </p>
+
+  <footer>
+    Com todo meu amor,<br><strong>Sua eterna apaixonada 💘</strong>
+  </footer>
+
+  <!-- Corações animados -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
+
