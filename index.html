@@ -5,44 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feliz Aniversário, Amor!</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #ffd6e0, #ffeaf2);
       color: #333;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
+      padding: 20px;
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       color: #d6336c;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     h2 {
-      font-size: 1.5em;
-      margin-top: -10px;
-      color: #444;
-    }
-
-    p {
       font-size: 1.2em;
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.6;
-    }
-
-    .photo {
-      margin: 20px auto;
+      margin: 10px 0 20px;
+      color: #555;
     }
 
     .photo img {
-      width: 300px;
-      max-width: 90%;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      max-width: 90%;
+      margin: 0 auto 20px;
+      line-height: 1.6;
     }
 
     footer {
@@ -61,6 +64,7 @@
       transform: rotate(45deg);
       animation: rise 8s infinite ease-in;
       opacity: 0.6;
+      z-index: 0;
     }
 
     .heart::before,
@@ -95,6 +99,18 @@
         transform: translateX(100px) rotate(45deg);
       }
     }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -102,7 +118,7 @@
   <h2>Você é minha alegria de todos os dias 💕</h2>
 
   <div class="photo">
-    <img src="./Nos.png" alt="Nós" />
+    <img src="nos.jpg" alt="Nós dois" />
   </div>
 
   <p>
@@ -114,7 +130,7 @@
   </p>
 
   <footer>
-    Com todo meu amor,<br><strong>Sua eterna apaixonada 💘</strong>
+    Com todo meu amor,<br><strong>Seu eterno apaixonado 💘</strong>
   </footer>
 
   <!-- Corações animados -->
@@ -131,4 +147,3 @@
   </script>
 </body>
 </html>
-
